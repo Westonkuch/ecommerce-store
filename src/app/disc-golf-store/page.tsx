@@ -1,4 +1,4 @@
-'use client'; // Add this line to indicate this is a client-side component
+'use client';
 
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
@@ -10,8 +10,8 @@ export default function DiscGolfStore() {
   const [products, setProducts] = useState<any[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-  // Fetch products from API
   const fetchProducts = async () => {
     try {
       const response = await fetch("/api/products");
@@ -19,7 +19,6 @@ export default function DiscGolfStore() {
         throw new Error("Failed to fetch products");
       }
 
-      // Check if the response is JSON
       const contentType = response.headers.get("content-type");
       if (contentType && contentType.includes("application/json")) {
         const data = await response.json();
@@ -38,6 +37,10 @@ export default function DiscGolfStore() {
     fetchProducts();
   }, []);
 
+  const filteredProducts = selectedCategory
+    ? products.filter((product) => product.category === selectedCategory)
+    : products;
+
   if (loading) return <div>Loading products...</div>;
   if (error) return <div>{error}</div>;
 
@@ -46,12 +49,12 @@ export default function DiscGolfStore() {
       <Header />
       <main className="max-w-7xl mx-auto py-6 px-6 lg:px-8">
         <div className="flex">
-          <Sidebar />
+          <Sidebar onCategorySelect={setSelectedCategory} />
           <section className="w-3/4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {products.length === 0 ? (
+            {filteredProducts.length === 0 ? (
               <div>No products found</div>
             ) : (
-              products.map((product) => (
+              filteredProducts.map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))
             )}

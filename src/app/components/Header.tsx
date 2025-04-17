@@ -9,7 +9,7 @@ export default function Header() {
         <div className="flex items-center">
           {/* Logo Link to Home */}
           <Link href="/disc-golf-store">
-            <Image src="/logo.svg" alt="Disc Golf Store" width={150} height={40} />
+            <Image src="/images/logo.jpg" alt="Disc Golf Store" width={150} height={40} />
           </Link>
         </div>
         <nav className="space-x-6">
