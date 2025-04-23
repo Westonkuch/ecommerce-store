@@ -71,13 +71,13 @@ export default function DiscGolfStore() {
         <img 
           src="/images/background.png" 
           alt="Disc golf background"
-          className="w-full h-full object-cover opacity-20" // Adjust opacity as needed
+          className="w-full h-full object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-white/30"></div> {/* Light overlay for better readability */}
+        <div className="absolute inset-0 bg-white/30"></div>
       </div>
       
       {/* Content */}
-      <div className="relative"> {/* This ensures content stays above background */}
+      <div className="relative">
         <Header />
         <main className="max-w-7xl mx-auto py-6 px-6 lg:px-8">
           <div className="flex">
@@ -92,7 +92,15 @@ export default function DiscGolfStore() {
                 </div>
               ) : (
                 filteredProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
+                  <div 
+                    key={product.id}
+                    className="transition-all duration-300 hover:scale-105 hover:z-10"
+                  >
+                    <ProductCard 
+                      product={product}
+                      showDescriptionOnHover
+                    />
+                  </div>
                 ))
               )}
             </section>

@@ -1,3 +1,5 @@
+// C:\Users\TC Panther\ecommerce-store\ecommerce-store\prisma\schema.prisma
+
 generator client {
   provider = "prisma-client-js"
 }
