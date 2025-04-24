@@ -13,20 +13,12 @@ const orbitron = Orbitron({
   display: 'swap',
 });
 
-const NAV_LINKS = [
-  { href: '/drivers', label: 'Drivers' },
-  { href: '/midranges', label: 'Midranges' },
-  { href: '/putters', label: 'Putters' },
-  { href: '/accessories', label: 'Accessories' },
-];
-
 export default function Header() {
   const { cart } = useCart();
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [products, setProducts] = useState([]);
 
-  // Fetch products when search opens
   useEffect(() => {
     const fetchProducts = async () => {
       if (searchOpen && products.length === 0) {
@@ -59,7 +51,7 @@ export default function Header() {
       </div>
 
       {/* Main Header Content */}
-      <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6 relative">
+      <div className="max-w-7xl mx-auto flex justify-between items-center py-2 px-6 relative">
         {/* Logo and Branding */}
         <div className="flex items-center space-x-4">
           <Link 
@@ -70,7 +62,7 @@ export default function Header() {
               setMobileMenuOpen(false);
             }}
           >
-            <div className="rounded-full overflow-hidden border-2 border-white hover:border-green-300 transition-all w-20 h-20 md:w-24 md:h-24">
+            <div className="rounded-full overflow-hidden border-2 border-white hover:border-green-300 transition-all w-16 h-16 md:w-20 md:h-20">
               <Image 
                 src="/images/logo2.png" 
                 alt="Disc Golf Store" 
@@ -80,26 +72,20 @@ export default function Header() {
                 priority
               />
             </div>
-            <h1 className={`${orbitron.className} text-2xl md:text-3xl text-white tracking-wider`}>
+            <h1 className={`${orbitron.className} text-xl md:text-2xl text-white tracking-wider`}>
               <span className="text-green-300">AERO</span>
               <span className="text-white">SPIN</span>
             </h1>
           </Link>
         </div>
 
-        {/* Desktop Navigation */}
-        <nav className="space-x-6 hidden md:flex">
-          {NAV_LINKS.map((link) => (
-            <Link 
-              key={link.href}
-              href={link.href}
-              className="text-white hover:text-green-300 transition-colors font-medium"
-              onClick={() => setSearchOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+        {/* Slogan Section */}
+        <div className="flex flex-col items-start space-y-2 text-white text-center">
+          {/* "Elevate Your Game" on Top with Bigger Font Size */}
+          <p className="italic text-lg md:text-xl font-semibold">"Elevate Your Game."</p>
+          {/* Secondary Slogan Text */}
+          <p className="hidden md:block text-sm md:text-lg">Disc Golf Gear That Works As Hard As You Do</p>
+        </div>
 
         {/* Action Buttons */}
         <div className="flex items-center space-x-4">
@@ -156,16 +142,7 @@ export default function Header() {
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-gray-900/95 z-50 p-4">
           <div className="flex flex-col space-y-3">
-            {NAV_LINKS.map((link) => (
-              <Link 
-                key={link.href}
-                href={link.href}
-                className="text-white hover:text-green-300 transition-colors font-medium py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {/* Mobile Menu Links */}
           </div>
         </div>
       )}
