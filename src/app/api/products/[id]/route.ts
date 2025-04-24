@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma'; // ✅ named import
+import { prisma } from '@/lib/prisma'; 
 
 
 export const runtime = 'nodejs'; // Ensure this is present
@@ -8,7 +8,7 @@ export async function GET(
     request: Request,
     { params }: { params: Promise<{ id: string }> }
   ) {
-    const { id } = await params; // ✅ await the params
+    const { id } = await params; 
     const productId = parseInt(id, 10);
   
     if (isNaN(productId)) {

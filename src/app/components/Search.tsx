@@ -128,7 +128,7 @@ export default function Search({
   const handleSelect = useCallback(
     (product: Product) => {
       console.log('[Search] Selected product:', product.id);
-      router.push(`/products/${product.id}`); // Fixed: Changed from '/product' to '/products'
+      router.push(`/products/${product.id}`); 
       closeSearch();
     },
     [router, closeSearch]

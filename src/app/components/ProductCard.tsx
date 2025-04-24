@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { useCart } from "@/context/CartContext";
 
-// This should match exactly with your CartContext's Product type
+
 type Product = {
   id: number;
   name: string;
@@ -24,7 +24,7 @@ export default function ProductCard({
   const { addToCart } = useCart();
 
   const handleAddToCart = () => {
-    // Just pass the product - the context will handle adding quantity
+    
     addToCart(product);
   };
 

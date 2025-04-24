@@ -1,11 +1,11 @@
 // src/app/drivers/page.tsx
-import Header from "../components/Header"; // Import the Header component
-import Link from "next/link"; // Import the Link component
+import Header from "../components/Header"; 
+import Link from "next/link"; 
 
 export default function Drivers() {
   return (
     <div>
-      <Header /> {/* This will display the header */}
+      <Header /> 
       <h1>Disc Golf Drivers</h1>
       <p>Explore our selection of high-quality drivers for all levels of play.</p>
       
@@ -16,7 +16,7 @@ export default function Drivers() {
         </Link>
       </div>
       
-      {/* You can display driver products here */}
+      
     </div>
   );
 }

@@ -16,10 +16,10 @@ export default function CartPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Header - Make sure this is the same Header component you're using elsewhere */}
+      
       <Header />
 
-      {/* Main Content - Keep your working cart implementation */}
+      
       <div className="flex-grow container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-8">Your Shopping Cart</h1>
 
@@ -120,7 +120,7 @@ export default function CartPage() {
         )}
       </div>
 
-      {/* Footer - Add this at the bottom */}
+      
       <footer className="bg-gray-900 text-white py-8 mt-auto">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -130,14 +130,7 @@ export default function CartPage() {
                 Premium disc golf equipment and accessories.
               </p>
             </div>
-            <div>
-              <h3 className="text-lg font-bold mb-4">Quick Links</h3>
-              <ul className="space-y-2">
-                <li><Link href="/drivers" className="text-gray-400 hover:text-green-300 transition">Drivers</Link></li>
-                <li><Link href="/midranges" className="text-gray-400 hover:text-green-300 transition">Midranges</Link></li>
-                <li><Link href="/putters" className="text-gray-400 hover:text-green-300 transition">Putters</Link></li>
-              </ul>
-            </div>
+            
             <div>
               <h3 className="text-lg font-bold mb-4">Contact</h3>
               <p className="text-gray-400">support@aerospin.com</p>

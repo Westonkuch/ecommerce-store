@@ -47,11 +47,11 @@ export default function Header() {
           quality={85}
           priority
         />
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
       </div>
 
       {/* Main Header Content */}
-      <div className="max-w-7xl mx-auto flex justify-between items-center py-2 px-6 relative">
+      <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6 relative">
         {/* Logo and Branding */}
         <div className="flex items-center space-x-4">
           <Link 
@@ -62,7 +62,7 @@ export default function Header() {
               setMobileMenuOpen(false);
             }}
           >
-            <div className="rounded-full overflow-hidden border-2 border-white hover:border-green-300 transition-all w-16 h-16 md:w-20 md:h-20">
+            <div className="rounded-full overflow-hidden border-2 border-white hover:border-green-300 transition-all w-18 h-18 md:w-24 md:h-24">
               <Image 
                 src="/images/logo2.png" 
                 alt="Disc Golf Store" 
@@ -72,7 +72,7 @@ export default function Header() {
                 priority
               />
             </div>
-            <h1 className={`${orbitron.className} text-xl md:text-2xl text-white tracking-wider`}>
+            <h1 className={`${orbitron.className} text-xl md:text-3xl text-white tracking-wider`}>
               <span className="text-green-300">AERO</span>
               <span className="text-white">SPIN</span>
             </h1>
@@ -80,10 +80,10 @@ export default function Header() {
         </div>
 
         {/* Slogan Section */}
-        <div className="flex flex-col items-start space-y-2 text-white text-center">
-          {/* "Elevate Your Game" on Top with Bigger Font Size */}
+        <div className="flex flex-col items-start space-y-1 text-white text-center">
+          {/* Main Slogan */}
           <p className="italic text-lg md:text-xl font-semibold">"Elevate Your Game."</p>
-          {/* Secondary Slogan Text */}
+          {/* Secondary Slogan */}
           <p className="hidden md:block text-sm md:text-lg">Disc Golf Gear That Works As Hard As You Do</p>
         </div>
 

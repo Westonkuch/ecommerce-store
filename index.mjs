@@ -4,7 +4,7 @@ const prisma = new PrismaClient();
 
 async function main() {
   const users = await prisma.user.findMany();
-  console.log(users); // Check what this logs
+  console.log(users); 
 }
 
 main()
@@ -12,5 +12,5 @@ main()
     throw e;
   })
   .finally(async () => {
-    await prisma.$disconnect(); // Disconnect after query
+    await prisma.$disconnect(); 
   });
