@@ -1,31 +1,29 @@
 # Ecommerce Store
 
-A full-stack ecommerce store built with **Next.js** and **Tailwind CSS**. The platform is designed to sell disc golf products, with various categories like drivers, putters, accessories, and more. This project utilizes modern web development technologies such as React, Prisma, and a PostgreSQL database for managing products and cart data.
+Welcome to the **Ecommerce Store** project! This is a full-stack web application built with Next.js, TypeScript, and various technologies to provide a seamless online shopping experience. The project allows users to browse products, add items to their cart, and proceed to checkout.
 
 ## Features
 
-- **Product Pages**: Browse products by category (Drivers, Midranges, Putters, Accessories)
-- **Search Functionality**: Users can search for products across all categories.
-- **Add to Cart**: Users can add products to their shopping cart and view the cart.
-- **Responsive Design**: Fully responsive design with Tailwind CSS, providing a seamless experience on both mobile and desktop.
-- **Dynamic Routing**: Product details are dynamically generated from the database using Next.js API routes.
-- **User-Friendly UI**: A clean and modern UI built with Next.js and styled with Tailwind CSS.
+- **Product Catalog**: View products such as drivers, midranges, putters, and accessories.
+- **Cart Functionality**: Add products to the cart, update quantities, and remove items.
+- **Search**: Search for products by name or category.
+- **Responsive Design**: Optimized for both desktop and mobile screens.
+- **Authentication**: Secure authentication system for managing user profiles and orders.
+- **API**: Backend API to manage products, user cart, and order data.
 
 ## Technologies Used
 
-- **Frontend**: Next.js, React, Tailwind CSS
-- **Backend**: Node.js, Prisma, PostgreSQL
-- **State Management**: Context API (for cart management)
-- **Database**: PostgreSQL (for storing product data and cart information)
-- **Search**: Custom search functionality with API routes
+- **Next.js**: A React framework for building static and dynamic web applications.
+- **TypeScript**: A superset of JavaScript that adds static types.
+- **Prisma**: ORM (Object Relational Mapping) for database interactions.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **React Context**: State management for the shopping cart.
+- **Vercel**: Hosting platform for deployment.
 
 ## Installation
 
-### Prerequisites
-- Node.js >=14
-- PostgreSQL (locally or remotely)
+To get started with the project locally, follow these steps:
 
-### Clone the repository
-
-```bash
-git clone https://github.com/your-username/ecommerce-store.git
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Westonkuch/ecommerce-store.git
